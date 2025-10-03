@@ -1,6 +1,6 @@
 
 export async function fetch_json(code) {
-    const response = await fetch("./data/shareholder_data.json");
+    const response = await fetch("./data/revise_data.json");
     const companies = await response.json();
     const input = normalizeText(code);
 

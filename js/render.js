@@ -1,4 +1,4 @@
-import {create_table} from './create_table.js';
+import {render_rivise} from "./revise.js";
 
 export async function render_data(company, input_word) {
 
@@ -9,7 +9,6 @@ export async function render_data(company, input_word) {
     // 部分一致 
     else {
         const listDiv = document.getElementById("candidates");
-        console.log(company)
         
         if (company.data.length === 0) {
             listDiv.innerHTML = `<p>「${input_word}」に一致する候補は0件でした。</p>`;
@@ -49,7 +48,7 @@ async function display(company) {
         業種: ${company["業種"]}<br>
         `;
     resultDiv.appendChild(header);
-    create_table(company);
+    render_rivise(company);
 
     // URLの?code=を証券コードに置き換える
     const newUrl = `${window.location.pathname}?code=${company["証券コード"]}`;
