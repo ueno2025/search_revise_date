@@ -1,1 +1,35 @@
+a {
+    color: inherit;
+    /* 周りのテキストと同じ色にする */
+    text-decoration: none;
+    /* 下線を消す */
+}
 
+a:hover {
+    text-decoration: underline;
+    /* ホバー時だけ下線を表示する（控えめに） */
+}
+
+/* 大株主テーブル用のスタイル */
+table.shareholders {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+table.shareholders th,
+table.shareholders td {
+  border: 1px solid #000;
+  padding: 4px;
+  text-align: left;
+}
+
+table.shareholders th {
+  background-color: #f0f0f0;
+}
+
+/* 会社名・業種 */
+#result p.header {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
